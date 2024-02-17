@@ -17,7 +17,6 @@ today = datetime.date.today()
 
 end = today.year
 start = end - 70
-print(start)
 
 st.sidebar.header('User Input Features')
 selected_year = st.sidebar.selectbox('Year', list(reversed(range(start,end+1))))
