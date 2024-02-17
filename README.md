@@ -36,6 +36,6 @@ The NBA Player Stats Explorer is a Streamlit web application designed to provide
 
 The NBA player statistics data is scraped from [Basketball-reference.com](https://www.basketball-reference.com/) using the Pandas `read_html()` function.
 
-## Contributing
+---
 
-Contributions are welcome! Feel free to open an issue or submit a pull request with any enhancements or bug fixes.
+Made with ❤️ by Jaweria Batool
