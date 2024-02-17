@@ -8,8 +8,7 @@ import numpy as np
 st.title('NBA Player Stats Explorer')
 
 st.markdown("""
-This app performs simple webscraping of NBA player stats data!
-* **Python libraries:** base64, pandas, streamlit
+This app enables interactive exploration of NBA player statistics with user-selected filters, offering data visualization and download functionalities for enhanced analysis.
 * **Data source:** [Basketball-reference.com](https://www.basketball-reference.com/).
 """)
 
@@ -54,20 +53,8 @@ def filedownload(df):
 
 st.markdown(filedownload(df_selected_team), unsafe_allow_html=True)
 
-# Heatmap
-# if st.button('Intercorrelation Heatmap'):
-#     st.header('Intercorrelation Matrix Heatmap')
-#     df_selected_team.to_csv('output.csv',index=False)
-#     df = pd.read_csv('output.csv')
 
-#     corr = df.corr()
-#     mask = np.zeros_like(corr)
-#     mask[np.triu_indices_from(mask)] = True
-#     with sns.axes_style("white"):
-#         f, ax = plt.subplots(figsize=(7, 5))
-#         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
-#     st.pyplot()
-
+#  HeatMap
 if st.button('Intercorrelation Heatmap'):
     st.header('Intercorrelation Matrix Heatmap')
     df_selected_team.to_csv('output.csv', index=False)
@@ -84,3 +71,13 @@ if st.button('Intercorrelation Heatmap'):
         f, ax = plt.subplots(figsize=(7, 5))
         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
     st.pyplot(f)
+
+st.write(
+            """
+            Made By **_Jaweria Batool_**
+            """
+        )
+
+# link to GitHub README file
+st.write("For more information about how the app works, please check out the [GitHub README](https://github.com/Jaweria-B/eda-basketball) file.")
+
