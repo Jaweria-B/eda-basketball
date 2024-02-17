@@ -4,6 +4,7 @@ import base64
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import datetime
 
 st.title('NBA Player Stats Explorer')
 
@@ -12,8 +13,14 @@ This app enables interactive exploration of NBA player statistics with user-sele
 * **Data source:** [Basketball-reference.com](https://www.basketball-reference.com/).
 """)
 
+today = datetime.date.today()
+
+end = today.year
+start = end - 70
+print(start)
+
 st.sidebar.header('User Input Features')
-selected_year = st.sidebar.selectbox('Year', list(reversed(range(1950,2024))))
+selected_year = st.sidebar.selectbox('Year', list(reversed(range(start,end+1))))
 
 # Web scraping of NBA player stats
 @st.cache_data
