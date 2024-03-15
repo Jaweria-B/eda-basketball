@@ -20,7 +20,7 @@ The NBA Player Stats Explorer is a Streamlit web application designed to provide
 5. Explore the displayed data and visualize intercorrelation heatmaps by clicking the corresponding buttons.
 
 ## Demo
-[Live Demo](https://eda-basketball-jb.streamlit.app/)
+Experience the Live App here: [Live Demo](https://eda-basketball-jb.streamlit.app/)
 
 ## Technologies Used
 
